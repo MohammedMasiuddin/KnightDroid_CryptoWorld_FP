@@ -14,7 +14,7 @@
 
 #cryptoimage{
     width: 70px;
-    margin-bottom: 10px;
+    margin: auto;    
     
 }
 
@@ -33,7 +33,9 @@
     background-color: #ccc;
     text-decoration-style: wavy;
     box-sizing: border-box;
-
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
 }
 
 .cardtext{
@@ -49,12 +51,14 @@
 .crpto p{
     display: inline-block;
     margin: unset;
-    text-align: start;
+    text-align: center;
     font-size: auto;
     line-height: 1.5;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
       
 }
+
+
 
 .loadmorediv{
     margin-top: 30px;

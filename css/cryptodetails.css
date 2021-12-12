@@ -2,7 +2,9 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    
+    background-color: #ccc;
+    padding: 1rem;
+    border-radius: 1%;
 }
 
 .container{
@@ -21,18 +23,27 @@
 }
 
 .cryptodetails p{
-    display: inline-block;
+    display: flex;
+    justify-content: start;
     margin: unset;
     text-align: start;
     font-size: auto;
+    padding: .5rem;
     line-height: 1.5;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: 1px solid #333;
       
 }
 
+.cryptodetails p b{
+     flex-grow: 1;      
+}
+
+
+
 #cryptoimage{
     width: 150px;
-    margin-bottom: 10px;
+    margin: 10px auto;
 }
 
 

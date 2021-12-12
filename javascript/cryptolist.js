@@ -27,7 +27,7 @@ $(function () {
                 <div id="crypto${datalist}" class="childcrypto crpto">
                     <img id="cryptoimage" src="https:www.coinlore.com/img/${valueOfElement.nameid}.png" alt="bitcoin">
                     <div class="cardtext">
-                        <p id="symbol"><b>Symbol :</b>${valueOfElement.symbol}</p>
+                        <p id="symbol"><b>Symbol :</b> <span> ${valueOfElement.symbol} </span> </p>
                         <p id="name"> <b>Name :</b>${valueOfElement.name}</p>
                         <p id="rank"> <b>Rank :</b>${valueOfElement.rank}</p>
                         <p id="price_usd"><b>Price :</b>$ ${valueOfElement.price_usd}</p>
