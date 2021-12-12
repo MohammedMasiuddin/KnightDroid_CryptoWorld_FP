@@ -1,6 +1,6 @@
+
+
 .container{
-    width: auto;
-    height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
@@ -10,9 +10,12 @@
 
 }
 
+
+
 #cryptoimage{
     width: 70px;
     margin-bottom: 10px;
+    
 }
 
 .childcrypto{
