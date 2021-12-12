@@ -1,7 +1,10 @@
 $(function () {
     var datalistcount = 0;
+    var datalist = 0;
     addmore(datalistcount);
-    $("#crpto").remove();
+    $(".crpto").remove();
+
+    console.log(window.location.origin);
 
     $("#loadmore").on("click", function () {
         datalistcount = datalistcount+12;
@@ -16,12 +19,12 @@ $(function () {
             dataType: "json",
             success: function (response) {
                 console.log(response);
-    
-                $.each(response.data, function (indexInArray, valueOfElement) {             
+                $.each(response.data, function (indexInArray, valueOfElement) { 
+                    var temp = datalist
                     $(".container").append(
                      
                 `
-                <div id="crpto" class="childcrypto">
+                <div id="crypto${datalist}" class="childcrypto crpto">
                     <img id="cryptoimage" src="https:www.coinlore.com/img/${valueOfElement.nameid}.png" alt="bitcoin">
                     <div class="cardtext">
                         <p id="symbol"><b>Symbol :</b>${valueOfElement.symbol}</p>
@@ -32,6 +35,15 @@ $(function () {
                 </div>
                 `
                     );
+                    $(`#crypto${datalist}`).on("click", function () {
+                        var baseurl = window.location.origin + `/cryptodetails.html?cryptoid=${valueOfElement.id}`
+                        window.location.href = baseurl;
+                        console.log(baseurl);
+                        console.log(temp);
+                    });
+                    datalist++;
+
+
                 });
             }
         });

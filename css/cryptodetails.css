@@ -1,0 +1,38 @@
+.cryptodetails{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container{
+    width: 60%;
+    margin: auto;
+}
+
+.cardtext{
+    margin: auto;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: flex-start;
+    width: auto;
+    display: inline-flex;
+
+}
+
+.cryptodetails p{
+    display: inline-block;
+    margin: unset;
+    text-align: start;
+    font-size: auto;
+    line-height: 1.5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+      
+}
+
+#cryptoimage{
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+

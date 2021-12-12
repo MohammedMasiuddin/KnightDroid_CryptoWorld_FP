@@ -22,7 +22,7 @@
   
 }
 
-#crpto{
+.crpto{
     border-radius: 5% 5%;
     padding: 1rem;
     width: 100%;
@@ -35,14 +35,22 @@
 
 .cardtext{
     margin: auto;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
+    justify-content: flex-start;
+    width: auto;
+    display: inline-flex;
+
 }
 
-#crpto p{
+.crpto p{
     display: inline-block;
-    margin: auto;
+    margin: unset;
     text-align: start;
+    font-size: auto;
+    line-height: 1.5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+      
 }
 
 .loadmorediv{
