@@ -7,6 +7,12 @@
     justify-items: center;
     align-items: center;
     padding: 1rem;
+
+}
+
+#cryptoimage{
+    width: 70px;
+    margin-bottom: 10px;
 }
 
 .childcrypto{
@@ -18,10 +24,28 @@
 
 #crpto{
     border-radius: 5% 5%;
-
-    margin: 1rem;
+    padding: 1rem;
     width: 100%;
     text-align: center;
     background-color: #ccc;
     text-decoration-style: wavy;
+    box-sizing: border-box;
+
+}
+
+.cardtext{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#crpto p{
+    display: inline-block;
+    margin: auto;
+    text-align: start;
+}
+
+.loadmorediv{
+    margin-top: 30px;
+    text-align: center;
 }
