@@ -14,8 +14,8 @@ body {
       /* background-color: brown; */
       background: linear-gradient(
         90deg,
-        rgba(216, 170, 191, 1) 28%,
-        rgba(148, 187, 233, 1) 100%
+        #D3E4CD 28%,
+        #FFF9B6 100%
       );
       
       /* background-image: url("../images/unsplashBitcoin.jpg"); */

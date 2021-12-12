@@ -15,7 +15,6 @@ $(document).ready(function () {
             $("#mcapchange span").html(response[0].mcap_change + "%");
             $("#volchange span").html(response[0].volume_change + "%");
             $("#avgchange span").html(response[0].avg_change_percent + "%");
-
         }
     });
 
