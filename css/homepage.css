@@ -14,8 +14,8 @@ body {
       /* background-color: brown; */
       background: linear-gradient(
         90deg,
-        rgba(216, 170, 191, 1) 28%,
-        rgba(148, 187, 233, 1) 100%
+        #84DFFF 10%,
+        #516BEB 100%
       );
       
       /* background-image: url("../images/unsplashBitcoin.jpg"); */
@@ -105,8 +105,8 @@ main .globalStats div{
 footer {
     background: linear-gradient(
       90deg,
-      rgba(216, 170, 191, 1) 28%,
-      rgba(148, 187, 233, 1) 100%
+      #84DFFF 10%,
+      #516BEB 100%
     );
     text-align: center;
     width: 960px;
