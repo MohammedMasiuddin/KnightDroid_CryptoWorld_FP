@@ -1,0 +1,27 @@
+.container{
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.childcrypto{
+    transition: all 0.5 ease;
+    animation: animateElement linear .3s;
+    animation-iteration-count: 1;
+  
+}
+
+#crpto{
+    border-radius: 5% 5%;
+
+    margin: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: #ccc;
+    text-decoration-style: wavy;
+}

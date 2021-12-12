@@ -1,5 +1,6 @@
-$(document).ready(function () {
-    
+$(function () {
+
+   
     $.ajax({
         type: "get",
         url: "https://api.coinlore.net/api/global/",
