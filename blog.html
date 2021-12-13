@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog CryptoWorld</title>
     <link rel="stylesheet" href="css/blog.css" />
+    <title>Document</title>
   </head>
   <body>
     <div class="container">
       <div class="navbar">
-        <h2 class="heading">CRYPTO WORLD</h2>
-        <!-- <img src="images/Crypto World 2.png" class="logo" /> -->
+        <h2 class="heading">
+          Crypto <br />
+          World
+        </h2>
+
         <nav>
           <ul id="menuList">
             <li><a href="index.html">Main Page </a></li>
             <li><a href="contact.html">Contact Us </a></li>
-            <li><a href="">About Us </a></li>
+            <li><a href="contact.html">About Us </a></li>
           </ul>
         </nav>
         <img
@@ -46,22 +49,36 @@
           <h4>Yes, lets have a look</h4>
           <button
             type="button"
-            onclick="location.href = 'index.html';"
             id="homeButton"
+            onclick="location.href='index.html';"
           >
             Welcome<img src="images/arrow.png" />
           </button>
+          <!-- <br />
+          <button type="button" id="knight">
+            Know our Team<img src="images/arrow.png" />
+          </button> -->
         </div>
         <div class="col2">
           <img src="images/CW-logo-bg.png" class="crypto" />
           <div class="color-box"></div>
         </div>
       </div>
-
       <div class="social-links">
         <p>&copy; 2021 This website is built on html and css and JavaScript</p>
       </div>
     </div>
-    <script src="blog.js"></script>
+    <script>
+      var menuList = document.getElementById("menuList");
+      menuList.style.maxHeight = "0px";
+
+      function togglemenu() {
+        if (menuList.style.maxHeight == "0px") {
+          menuList.style.maxHeight = "130px";
+        } else {
+          menuList.style.maxHeight = "0px";
+        }
+      }
+    </script>
   </body>
 </html>

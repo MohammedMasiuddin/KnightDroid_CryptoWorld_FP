@@ -4,12 +4,6 @@
   font-family: sans-serif;
 }
 
-.heading {
-  font-size: 54px;
-  margin-top: 30px;
-  color: #28a745;
-}
-
 .container {
   width: 100%;
   min-height: 100vh;
@@ -17,7 +11,7 @@
   padding-left: 8%;
   box-sizing: border-box;
   overflow: hidden;
-  background: #000;
+  background: rgba(0, 0, 0, 1);
 }
 .navbar {
   width: 100%;
@@ -46,7 +40,6 @@ nav ul li {
   display: inline-block;
   margin-right: 30px;
 }
-
 nav ul li a {
   text-decoration: none;
   color: #fff;
@@ -92,10 +85,12 @@ nav ul li a:hover {
   font-size: 20px;
   color: #fff;
 }
+
 button {
   width: 140px;
   border: 0;
   padding: 12px 10px;
+  margin: 30px;
   outline: none;
   color: #fff;
   background-color: #00b712;
@@ -108,7 +103,6 @@ button img {
   width: 30px;
   display: none;
 }
-
 button:hover img {
   display: block;
 }
@@ -157,6 +151,11 @@ button:hover {
   transform: translateX(150px);
 }
 
+.heading {
+  color: #00b712;
+  font-size: 54px;
+}
+
 .social-links img {
   height: 13px;
   margin: 20px;
@@ -184,12 +183,13 @@ button:hover {
   }
 
   nav ul li a {
-    color: #fff;
+    color: rgba(0, 0, 0, 0.8);
   }
 
   .menu-icon {
     display: block;
   }
+
   #menuList {
     overflow: hidden;
     transition: 0.5s;
@@ -213,14 +213,10 @@ button:hover {
   .col1 {
     flex-basis: 100%;
   }
-  .col1 h2 {
-    font-size: 35px;
-  }
   .col1 h3 {
     font-size: 15px;
   }
   .heading {
     font-size: 35px;
-    margin-top: 0;
   }
 }
