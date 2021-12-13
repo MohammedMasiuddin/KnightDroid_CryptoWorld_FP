@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Roboto:wght@300&display=swap');
+/*
 :root{
     --blue:#84DFFF;
     --darkblue:#516BEB;
@@ -8,7 +8,7 @@
     --text-shadow:.4rem .4rem 0 rgba(0, 0, 0, .2);
     --border:.2rem solid var(#84DFFF);
 }
-
+*/
 *{
     font-family: 'Poppins', sans-serif;
     margin:0; padding: 0;
@@ -31,7 +31,7 @@ section{
 }
 
 section:nth-child(even){
-    background: #000957;
+    background: #28a745;
 }
 
 .heading{
@@ -39,7 +39,7 @@ section:nth-child(even){
     padding-bottom: 2rem;
     text-shadow: var(--text-shadow);
     text-transform: uppercase;
-    color:white;
+    color:#000;
     font-size: 5rem;
     letter-spacing: .4rem;
 }
@@ -60,7 +60,13 @@ section:nth-child(even){
     color:var(--blue);
     cursor: pointer;
     font-size: 1.7rem;
-    background: #fff;
+    background: #28a745;
+}
+
+a .btn .primary{
+   background-color: #fff;
+   padding: 10px 20px;
+   
 }
 
 .btn span{
@@ -78,7 +84,7 @@ section:nth-child(even){
 
 .btn:hover span{
     color: var(--blue);
-    background:#fff;
+    background:#f4f4f4;
     margin-left: 1rem;
 }
 
@@ -100,7 +106,7 @@ section:nth-child(even){
 }
 
 .header .logo img{
-    color: var(--blue);
+    color: var(--green);
 }
 
 .header .navbar img{
@@ -110,14 +116,15 @@ section:nth-child(even){
 }
 
 .header .navbar a:hover{
-    color: var(--blue);
+    color: var(--green);
 }
+
 
 #menu-btn{
     font-size: 2.5rem;
     border-radius: .5rem;
     background: #eee;
-    color:var(--blue);
+    color:var(--green);
     padding: 1rem 1.5rem;
     cursor: pointer;
     display: none;
@@ -137,6 +144,7 @@ section:nth-child(even){
 
 .home .image img{
     width: 100%;
+    border-radius: 20px;
 }
 
 .home .content{
@@ -224,6 +232,13 @@ section:nth-child(even){
     line-height: 2;
 }
 
+.about{
+    background-color: #f4f4f4;
+    border: #fff 1px solid;
+    padding: 20px;
+    border-radius: 5px;
+}
+
 .about .row{
     display: flex;
     align-items: center;
@@ -237,6 +252,7 @@ section:nth-child(even){
 
 .about .row .image img{
     width: 100%;
+    border-radius: 5px;
 }
 
 .about .row .content{
@@ -357,12 +373,25 @@ section:nth-child(even){
     padding:1rem 4rem;
 }
 
+.review{
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
 .review .box-container{
+    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     gap:2rem;
+    font-size: 14px;
+    line-height: 1.8rem;
 }
 
+.review-headline{
+    font-size: 16px;
+}
+
+/* 
 .review .box-container .box{
     border:var(--border);
     box-shadow: var(--box-shadow);
@@ -412,7 +441,7 @@ section:nth-child(even){
     height: 25rem;
     width: 120%;
     z-index: -1;
-}
+} */
 
 .blogs .box-container{
     display: grid;
