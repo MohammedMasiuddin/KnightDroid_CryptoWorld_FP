@@ -156,6 +156,18 @@ h1 span{
     color: #28a745;
     text-decoration: underline;
   }
+
+
+  .islogin{
+    background-color: thistle;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.islogin i{
+    font-size: 2rem;
+}
+
 /* Media Queries*/
 @media screen (min-width: 1200px) {
     
