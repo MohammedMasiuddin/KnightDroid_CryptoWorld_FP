@@ -1,49 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
-    <title> Login - Crypto World</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
+    <title>Login - Crypto World</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <div class="headerdiv1">
+          <img
+            src="images/output-onlinepngtools.png"
+            alt="Logo Image"
+            class="headerlogo"
+            height="96px"
+            width="aut0"
+          />
+        </div>
+        <div class="headerdiv2">
+            <a href="index.html">
+                <h1 class="logo"> <span class="text-primary"><i class="fab fa-btc"></i> Crypto</span>World </h1>
+            </a>
+        </div>
+      </div>
+      <div class="navbar">
+        <p id="hamburgertag">&#x2630;</p>
+        <ul>
+          <a href="index.html">
+            <li>Home</li>
+          </a>
+          <a href="">
+            <li>About Us</li>
+          </a>
+          <a href="contact.html">
+            <li>Contact Us</li>
+          </a>
+          <a href="login1.html">
+            <li>Login</li>
+          </a>
+          <a href="registration.html">
+            <li>Register</li>
+          </a>
+        </ul>
+      </div>
+    </header>
     <div class="container">
-        <div class="signin">
-                <div class="logo">
-                    <h1><span>Crypto </span>  World</h1>
-                </div>
-                <form action="process.php">
-                    <div>
-                        <label>Email or Username</label>
-                        <input type="text" class="text-input" id="">
-                    </div>
-                    <div>
-                        <label>Password</label>
-                        <input type="password" class="text-input" id="">
-                    </div>
-                    <button type="submit" class="primary-button">Sign In</button>
-                </form>
-            <div class="links">
-                <a href="#">Forgot Password</a>
-            </div>
-            <div class="or">
-                <hr class="bar">
-                <span>OR</span>
-                <hr class="bar">
-            </div>
-            <div class="links">
-                <a href="#" class="secondary-button">Create an account</a>
-            </div>
-            
-        </div> 
-        <footer id="main-footer">
-            <p>Copyright &copy; 2021, Crypto World All rights Reserved</p>
-            <div>
-                <a href="#">Terms of use</a> | <a href="#">Privacy Policy</a>
-            </div>    
-        </footer>      
+      <div class="signin">
+        <div class="logo">
+          <h1><span>Crypto </span> World</h1>
+        </div>
+        <form id="loginform">
+          <div>
+            <label>Email or Username</label>
+            <input type="text" class="text-input" id="" />
+          </div>
+          <div>
+            <label>Password</label>
+            <input type="password" class="text-input" id="" />
+          </div>
+          <button type="submit" class="primary-button">Sign In</button>
+        </form>
+        <div class="links">
+          <a href="#">Forgot Password</a>
+        </div>
+        <div class="or">
+          <hr class="bar" />
+          <span>OR</span>
+          <hr class="bar" />
+        </div>
+        <div class="links">
+          <a href="#" class="secondary-button">Create an account</a>
+        </div>
+      </div>
+      <footer>
+        <p>&copy; 2021 This website is built on html and css and JavaScript</p>
+      </footer>
     </div>
-    
-</body>
+
+    <script src="./javascript/jquery-3.6.0.js"></script>
+    <script src="./javascript/login.js"></script>
+  </body>
 </html>
