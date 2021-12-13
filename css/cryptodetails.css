@@ -106,6 +106,12 @@
 .islogin i{
     font-size: 2rem;
 }
+footer{
+    margin: auto 0px;
+    background-color: #333;
+    color: #ccc;
+    padding: 1rem;
+}
 
 .favourate{
     font-size: 1rem;

@@ -4,6 +4,15 @@ $(function () {
     addmore(datalistcount);
     $(".crpto").remove();
 
+    $(`.islogin`).on(`click`, function () {
+        if (confirm("Press a button!")) {
+            window.localStorage.clear()
+            window.location.reload();
+          } else {
+            // 
+          }
+    });
+
     islogin()
 
     function islogin(params) {
@@ -12,7 +21,7 @@ $(function () {
 
 
     var mystorage = window.localStorage;
-    mytoken = mystorage.getItem("refreshToken");
+     var mytoken = mystorage.getItem("refreshToken");
 
     var somedata = {
         "grant_type":"refresh_token",
