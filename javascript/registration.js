@@ -36,12 +36,24 @@ $(function () {
         checkemail()
     });
 
+    $(`#passWord`).focusout(function (e) {
+        checkpassword()
+    });
 
+    $(`#confirmPassword`).focusout(function (e) {
+        checkconfirmpassword()
+    });
+
+
+    function emailIsValid(email) {
+        let pattern = /\S+@\S+\.\S+/;
+        return pattern.test(email);
+      }
 
 function checkemail() {
     var v = $(`#email`).val();
-    if (v == '' ) {
-        $(`#erroremail`).html("please enter valid last name");
+    if (!emailIsValid(v)) {
+        $(`#erroremail`).html("please enter a valid email");
         $(`#email`).css('border-bottom', '1px solid red');
         $(`#erroremail`).css("color","red");
         form = false
@@ -81,12 +93,44 @@ function checklastname() {
        }
    }
 
+   function checkpassword() {
+    var v = $(`#passWord`).val();
+    if (v = null || v == '' || v.length < 6) {
+        $(`#errorPassword`).html("please enter a valid password");
+        $(`#passWord`).css('border-bottom', '1px solid red');
+        $(`#errorPassword`).css("color","red");
+         form = false
+    }else{
+     $(`#errorPassword`).hide();;
+     $(`#passWord`).css('border-bottom', '1px solid green');
+     var form = true;
+    }
+}
+
+function checkconfirmpassword() {
+
+    var u = $(`#passWord`).val();
+    var v = $(`#confirmPassword`).val();
+    if (v != u) {
+        $(`#errorConfirmPassword`).html("Passwords do not match");
+        $(`#confirmPassword`).css('border-bottom', '1px solid red');
+        $(`#errorConfirmPassword`).css("color","red");
+         form = false
+    }else{
+     $(`#errorConfirmPassword`).hide();;
+     $(`#confirmPassword`).css('border-bottom', '1px solid green');
+     var form = true;
+    }
+}
+
 
     $("#formbtn").on("click", function () {
        console.log("sdfsfds");
        checkname();
        checklastname();
        checkemail();
+       checkpassword();
+       checkconfirmpassword();
        if (form) {
         //    registor();
         registor();
