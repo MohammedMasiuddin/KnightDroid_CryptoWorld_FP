@@ -12,6 +12,10 @@
         integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/registration.css" />
     <link rel="stylesheet" href="css/homepage.css" />
+    <link rel="stylesheet" href="css/homepage1.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+<link rel="stylesheet" href="css/login.css" />
 
     <title>Crypto World | Registration</title>
   </head>
@@ -29,7 +33,9 @@
           />
         </div>
         <div class="headerdiv2">
-          <h1>Crypto World</h1>
+          <a href="index.html">
+            <h1 class="logo"> <span class="text-primary"><i class="fab fa-btc"></i> Crypto</span>World </h1>
+        </a>
         </div>
       </div>
       <div class="navbar">
@@ -48,8 +54,11 @@
             <li>Login</li>
           </a>
           <a href="registration.html">
-            <li>Registore</li>
+            <li>Register</li>
           </a>
+          <li class="islogin">
+            <i class="far fa-user"></i>
+          </li>
         </ul>
       </div>
     </header>
@@ -57,7 +66,7 @@
       <div class="registration">
         <h1 class="logo"><span>Crypto</span> World</h1>
         <p>Cryptocurrency just got even better.</p>
-        <form name="registration">
+        <form name="registration" id="registorform">
           <div>
             <label for="firstName">First Name</label>
             <input
@@ -119,7 +128,7 @@
         </p>
       </div>
     </div>
-    <footer>
+    <footer class="foot">
       <p>&copy; 2021 This website is built on html and css and JavaScript</p>
     </footer>
 

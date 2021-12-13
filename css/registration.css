@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 *{
     box-sizing: border-box;
@@ -6,13 +5,16 @@
     padding:0;
 }
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'poppins', sans-serif;
     font-weight: 300;
     /* background:#181818; */
     background:#3a3939;
     overflow: hidden;
     color: #fff;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1{
@@ -25,7 +27,8 @@ h1{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    flex-grow: 1;
+    /* height: 100vh; */
 }
 
 h1 span{
@@ -119,7 +122,9 @@ h1 span{
     background-color: #249D9F;
 }
 
-
+.foot{
+    margin: auto 0px;
+}
 
 
 #main-footer{
@@ -131,3 +136,15 @@ h1 span{
     color: #28a745;
     text-decoration: underline;
   }
+
+
+  
+  .islogin{
+    background-color: thistle;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.islogin i{
+    font-size: 2rem;
+}
