@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Roboto:wght@300&display=swap');
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
-  
-  /* Main Styling */
-  html,body {
+
+/* Main Styling */
+html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.7em;
-  }
-  
-  a {
+}
+
+a {
     color: #fff;
     text-decoration: none;
-  }
+}
 
-  ul {
+ul {
     list-style: none;
 }
 
@@ -32,16 +32,55 @@ img {
     width: 100%;
 }
 
-  
-  h1, h2, h3 {
-    padding-bottom: 20px;
-  }
-  
-  p {
-    margin: 10px 0;
-  }
 
-header{
+h1, h2, h3 {
+    padding-bottom: 20px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 7px 20px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-primary, .bg-primary {
+    background: #28a745;
+    color: #fff;
+}
+
+.btn-secondary, .bg-secondary {
+    background: #0284d0;
+    color: #fff;
+}
+
+.btn-dark, .bg-dark {
+    background: #333;
+    color: #fff;
+}
+
+.btn-light, .bg-light {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,51 +88,63 @@ header{
     color: #fff;
     text-align: center;
     padding: 0 20px;
-    
+
 }
 
-.headerdiv1 img{
+.headerdiv1 img {
     display: none;
 }
 
-.navbar{
+.navbar {
     display: flex;
     flex-direction: row;
+
 }
 
-.navbar ul{
+.navbar ul {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
- .logo .text-primary {
+.logo .text-primary {
     color: #28a745;
 }
 
-h1{
+h1 {
     font-weight: bold;
+    margin-left: 20px;
 
 }
-.gun{
+
+.stats-container .headings {
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.home-container {
+    width: 100vw;
+}
+
+.gun {
     padding-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.navbar ul li{
+.navbar ul li {
     margin: 10px;
 }
 
-.navbar a{
+.navbar a {
     color: #fff;
     padding: 10px 20px;
     margin: 0 5px;
     font-size: 20px;
 }
 
-#hamburgertag{
+#hamburgertag {
     padding: 20px;
 }
 
@@ -101,105 +152,139 @@ h1{
     border-bottom: #28a745 2px solid;
 }
 
-main{
+/* main {
     flex-grow: 1;
     margin-top: 20px;
     margin-bottom: 20px;
-    
-}
 
-main .globalStats{
+} */
+
+/* main .globalStats {
     width: 100%;
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
-}
+} */
 
 
-.navbar ul{
+.navbar ul {
     display: flex;
     justify-content: space-around;
     margin: 0px;
     padding: 0px;
 }
 
-#hamburgertag{
+#hamburgertag {
     display: none;
 }
 
+.hero {
+    background: url('../images/pierre-borthiry-vBCVcWUyvyM-unsplash.jpg') no-repeat center center/cover ;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    color: #fff;
 
- 
-footer{
-    margin: 20px 0;
+}
+
+.hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.hero .content p {
+    font-size: 23px;
+    max-width: 600px;
+    margin: 20px 0 30px;
+}
+
+.stats-container {
+    background-color: #28a745;
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
 
 }
 
-footer .social{
-    color: #000;
-    margin-bottom: 15px;
+.stats-container .headings-1 {
+    font-size: 40px;
+    font-weight: bolder;
 }
 
-footer a{
-    padding: 10px;
-
-}
-
-
-
-/* */
-
-
-main{
-    flex-grow: 1;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.globalStats{
     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-main .globalStats{
-    width: 100%;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
+.topic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    border: #fff 2px solid;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 20px;
 }
 
-
-main .globalStats div{
-   width: 200px;
-   border-radius: 50%;
-   height: 150px;
-   text-align: center;
-   background-color: #ccc;
-   display: flex;
-   justify-content: center;
-   align-content: center;
-   flex-direction: column;
+.topic p{
+   
 }
 
+.cryptolist {
+    margin: auto;
+    width: 15%;
+    margin-top: 20px;
+    padding: 30px 20px;
+}
 
-
+.below-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    margin: auto;
+    margin-left: 10px;
+}
       
 footer p{
     /* color: #fff; */
 }
-footer{
-    margin: 20px 0;
+
+
+footer {
     text-align: center;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 5px;
 
 }
 
-footer .social{
-    color: #000;
+footer .social {
+
     margin-bottom: 15px;
 }
 
-footer a{
+footer a {
     padding: 10px;
 
 }
 
-
-  
+footer p {
+    color: #fff;
+}
