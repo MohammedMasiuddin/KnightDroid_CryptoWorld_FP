@@ -1,14 +1,94 @@
-import { indexdbdatabase } from "./indexdbdatabase";
+
 
 $(function () {
-    
+
     $(".cryptodetails").remove();
 
     var cryptoid = window.location.search.split('=')[1]
-console.log(cryptoid);
+    console.log(cryptoid);
 
 
+    window.IDBTransaction = window.IDBTransaction ||
+        window.webkitIDBTransaction || window.msIDBTransaction;
+    window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange ||
+        window.msIDBKeyRange
+
+    if (!window.indexedDB) {
+        window.alert("Your browser doesn't support a stable version of IndexedDB.")
+    }
+
+    const recentVistedCrypto = [
+        { id: "99999", name: "testing", nameid: "test",rank:"99999", cryptoid: "99999" },
+    ];
+    var db;
+    var request = window.indexedDB.open("CryptoWorld", 1);
+
+    request.onerror = function (event) {
+        console.log("error: ");
+    };
+
+
+
+    request.onsuccess = function (event) {
+        
+        db =  event.target.result;
+        console.log("success: " + db);
+        var objectStore = db.transaction("cryptos").objectStore("cryptos");
+            
+        let request = objectStore.getAll()
+        request.onsuccess = function() {
+           console.log(request);
+           console.log(request.result)
+           request.result.forEach(element => {
+            $(`.recentview`).append(
+                `
+                <div id="crypto${element.id}" class="childcrypto crpto">
+                  <img id="cryptoimage" src="https:www.coinlore.com/img/${element.nameid}.png" alt="bitcoin">
+                  <div class="cardtext">
+                      <p id="name"> <b>Name :</b>${element.name}</p>
+                      <p id="rank"> <b>Rank :</b>${element.rank}</p>
+                  </div>
+              </div>
+                `
+            )
+            $(`#crypto${element.id}`).on("click", function () {
+                var baseurl = window.location.origin + `/cryptodetails.html?cryptoid=${element.id}`
+                window.location.href = baseurl;
+                console.log(baseurl);
+                console.log(temp);
+            });
+           });      
+        };
+    };
+    request.onupgradeneeded = function (event) {
+        var db = event.target.result;
+        var objectStore = db.createObjectStore("cryptos",  {keyPath: 'id'} );
+
+    }
+
+
+   function addtorecents(params) {
+    var transaction = db.transaction("cryptos", "readwrite"); // (1)
+
+    // get an object store to operate on it
+    var crypt = transaction.objectStore("cryptos"); // (2)
     
+    var temp = { id:params.id, symbol:params.symbol, name: params.name, nameid: params.nameid,rank: params.rank, cryptoid: params.id };
+    
+    var request = crypt.add(temp); // (3)
+
+    var req = crypt.dele
+    
+    request.onsuccess = function() { // (4)
+      console.log("Book added to the store", request.result);
+    };
+    
+    request.onerror = function() {
+      console.log("Error", request.error);
+    };
+   }
+
+
 
     $.ajax({
         type: "get",
@@ -18,8 +98,9 @@ console.log(cryptoid);
         success: function (response) {
             console.log(response);
             var temp = response[0]
+            addtorecents(temp);
             $(".container").append(
-                 
+
                 `
                 <div  class="cryptodetails">
                     <img id="cryptoimage" src="https:www.coinlore.com/img/${temp.nameid}.png" alt="bitcoin">
@@ -40,12 +121,12 @@ console.log(cryptoid);
                 </div>
                 
                 `
-                    );
+            );
         }
     });
-    
 
-    
 
-    
+
+
+
 });

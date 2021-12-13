@@ -4,6 +4,8 @@ $(function () {
     addmore(datalistcount);
     $(".crpto").remove();
 
+    
+
     console.log(window.location.origin);
 
     $("#loadmore").on("click", function () {

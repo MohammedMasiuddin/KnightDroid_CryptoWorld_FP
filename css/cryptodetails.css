@@ -6,11 +6,15 @@
     padding: 1rem;
     border-radius: 1%;
     background-image: image();
+    
 }
 
 .container{
     width: 60%;
     margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
 }
 
 .cardtext{
@@ -47,4 +51,48 @@
     margin: 10px auto;
 }
 
+.recentview{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
 
+}
+
+.ptag{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+  
+}
+
+
+#cryptoimage{
+    width: 70px;
+    margin: auto;    
+    
+}
+
+.childcrypto{
+    transition: all 0.5 ease;
+    animation: animateElement linear .3s;
+    animation-iteration-count: 1;
+  
+}
+
+.crpto{
+    border-radius: 5% 5%;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: #ccc;
+    text-decoration-style: wavy;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
