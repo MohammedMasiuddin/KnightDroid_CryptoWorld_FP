@@ -47,36 +47,39 @@
         <div class="registration">
             <h1 class="logo"><span>Crypto</span> World</h1>
             <p>Cryptocurrency just got even better.</p>
-            <form id="register" >
-                <div>
+            <form name="registration">
+                <div >
                     <label for="firstName">First Name</label>
-                    <input type="text" placeholder="First Name" class="text-input" />
+                    <input id="firstName" type="text" placeholder="First Name" class="text-input" />
+                    <b  id="errorFirstName" ></b>
                 </div>
                 <div>
                     <label for="lastName">Last Name</label>
-                    <input type="text" placeholder="Last Name" class="text-input" />
+                    <input id="lastName" type="text" placeholder="Last Name" class="text-input" />
+                    <b  id="errorlastName" ></b>
+
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="email" placeholder="Email" class="text-input" />
-                </div>
+                    <input id="email" type="email" placeholder="Email" class="text-input"  />
+                    <b  id="erroremail" ></b>
+                </div>                
                 <div>
-                    <label for="mobile">Mobile</label>
-                    <input type="number" placeholder="Mobile Number" class="text-input" />
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" placeholder="Password" class="text-input" />
+                    <label for="passWord">Password</label>
+                    <input id="passWord" type="password" placeholder="Password" class="text-input"  />
+                    <input id="togglepaswd" type="checkbox"> show password
                 </div>
                 <div>
                     <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" placeholder="Confirm Password" class="text-input" />
+                    <input id="confirmPassword" type="password" placeholder="Confirm Password" class="text-input" />
+                    <input id="togglecnfpaswd" type="checkbox"> show password
                 </div>
             </form>
-            <button id="formbtn" class="primary-button" type="submit">Sign Up</button>
+            <p>Sign up</p>
+            <input id="formbtn" class="primary-button" type="submit">
             <p class="bottom">
                 Have an account?
-                <a href="login.html" class="secondary-button">Sign In</a>
+                <a href="login1.html" class="secondary-button">Sign In</a>
             </p>
         </div>
         <footer>
@@ -85,9 +88,12 @@
     </div>
 
     <script src="./javascript/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"
+        integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./javascript/registration.js"></script>
 
-
+ 
 </body>
 
 </html>

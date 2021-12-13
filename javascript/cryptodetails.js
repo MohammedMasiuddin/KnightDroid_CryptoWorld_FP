@@ -1,9 +1,14 @@
+import { indexdbdatabase } from "./indexdbdatabase";
+
 $(function () {
     
     $(".cryptodetails").remove();
 
     var cryptoid = window.location.search.split('=')[1]
 console.log(cryptoid);
+
+
+    
 
     $.ajax({
         type: "get",
