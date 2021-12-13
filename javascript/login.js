@@ -15,9 +15,9 @@ $(function () {
         console.log("sdfwreuihsdj");
 
         if ( $(`#togglepaswd`).prop('checked') ) {
-           $(`#passWord`).prop('type','text');
+           $(`#password`).prop('type','text');
         }else{
-            $(`#passWord`).prop('type','password');
+            $(`#password`).prop('type','password');
         }
     });
 
@@ -74,10 +74,12 @@ $(function () {
 
     $(`#emailid`).focusout(function (e) { 
         checkemail()
+        checkemail1()
     });
 
     $(`#pass`).focusout(function (e) {
         checkpassword()
+        checkpassword1()
     });
 
 
@@ -86,7 +88,7 @@ $(function () {
         return pattern.test(email);
       }
 
-    function checkemail() {
+    function checkemail1() {
     var v = $(`#emailid`).val();
     if (!emailIsValid(v)) {
         $(`#erroremail`).html("please enter a valid email");
@@ -101,7 +103,7 @@ $(function () {
     }
 }
 
-function checkpassword() {
+function checkpassword1() {
     var v = $(`#pass`).val();
     if (v = null || v == '' || v.length < 6) {
         $(`#errorpassword`).html("please enter a valid password");
