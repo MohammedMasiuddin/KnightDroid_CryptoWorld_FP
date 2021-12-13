@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/contactForm.css" />
+    <link rel="stylesheet" href="styleform.css" />
     <title>Contact us page</title>
   </head>
   <body>
@@ -66,18 +66,25 @@
           </div>
         </div>
         <div class="contactForm">
-          <form>
+          <form
+            name="myform"
+            action="https://formsubmit.co/ritraj.1619@gmail.com"
+            method="POST"
+            onsubmit="return validateform()"
+          >
             <h2>Send Message</h2>
+            <input type="hidden" name="_subject" value="New CryptoQuery!" />
+            <input type="hidden" name="_captcha" value="false" />
             <div class="inputBox">
-              <input type="text" name="" required="required" />
+              <input type="text" name="name" />
               <span>Name</span>
             </div>
             <div class="inputBox">
-              <input type="text" name="" required="required" />
+              <input type="text" name="email" />
               <span>Email</span>
             </div>
             <div class="inputBox">
-              <textarea required="required"></textarea>
+              <textarea name="message"></textarea>
               <span>Type your Message...</span>
             </div>
             <div class="inputBox">
@@ -87,5 +94,6 @@
         </div>
       </div>
     </section>
+    <script src="contact.js"></script>
   </body>
 </html>
