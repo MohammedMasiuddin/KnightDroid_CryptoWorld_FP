@@ -38,11 +38,16 @@ $(function () {
             console.log("login");
             console.log(response);
             $(`.islogin`).show()
+            // $(`.navlogin`).hide();
+            // $(`.navregister`).hide();
+            $(`#loginform`).html(" you are already login");
             
         },
         error:function (error) {
             console.log(error);
-            $(`.islogin`).hide()
+            $(`.islogin`).hide();
+            $(`.navlogin`).show();
+            $(`.navregister`).show();
           }
     });
 
