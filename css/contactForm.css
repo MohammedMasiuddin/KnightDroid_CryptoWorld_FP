@@ -84,7 +84,11 @@ body{
   font-weight: 500;
   color: #28a745;
 }
-
+.container .contactInfo .box .text a{
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
 .contactForm {
   width: 40%;
   height: 100%;
