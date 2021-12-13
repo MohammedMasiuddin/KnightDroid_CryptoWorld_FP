@@ -27,7 +27,7 @@ $(function () {
         console.log("error: ");
     };
 
-
+    
 
     request.onsuccess = function (event) {
         
@@ -84,10 +84,9 @@ $(function () {
     };
     
     request.onerror = function() {
-      console.log("Error", request.error);
+      console.log("error", request.error);
     };
    }
-
 
 
     $.ajax({
@@ -104,6 +103,7 @@ $(function () {
                 `
                 <div  class="cryptodetails">
                     <img id="cryptoimage" src="https:www.coinlore.com/img/${temp.nameid}.png" alt="bitcoin">
+                    
                     <div class="cardtext">
                         <p id="symbol"><b>Symbol :</b> ${temp.symbol}</p>
                         <p id="name"> <b>Name :</b> ${temp.name} </p>
@@ -118,10 +118,40 @@ $(function () {
                         <p id="price_usd"><b>Maximum supply :</b>  ${temp.msupply} </p>
                         <p id="price_usd"><b>Price in BTC (price_btc) :</b> ${temp.price_btc} </p>
                     </div>
+
+                    <Button class="favourate">
+                        Add to favourates <i class="fas fa-heart"></i>
+                    </Button>
                 </div>
                 
                 `
             );
+
+            var mystorage = window.localStorage;
+            var mylocalid = mystorage.getItem("localId")
+
+            var udata = {
+                myfavourate: [
+                    cryptoid
+                ]
+            }
+
+            $(`.favourate`).on(`click`, function () {
+                console.log("dfsf");
+                $.ajax({
+                    type: "POST",
+                    url: `https://crytoworld-ad40f-default-rtdb.firebaseio.com/users/${mylocalid}/data.json`,
+                    data: JSON.stringify(udata),
+                    dataType: "dataType",
+                    success: function (response) {
+                        console.log(response);
+                    },
+                    error:function (error) {
+                        console.log(error);
+                    }
+                });
+            });
+            https://crytoworld-ad40f-default-rtdb.firebaseio.com/users/djJNj282oJN7QTR0f12VQ9ZBS4a2/data/myfavourates
         }
     });
 

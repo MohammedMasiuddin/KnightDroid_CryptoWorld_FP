@@ -64,3 +64,14 @@
     margin-top: 30px;
     text-align: center;
 }
+
+
+.islogin{
+    background-color: thistle;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.islogin i{
+    font-size: 2rem;
+}

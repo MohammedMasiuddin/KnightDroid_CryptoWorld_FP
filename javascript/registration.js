@@ -138,6 +138,13 @@ function checklastname() {
             contentType:"application/json",
             success: function (response) {
                 console.log(response);
+                var mystorage = window.localStorage;
+                mystorage.setItem("User", response.email);
+                mystorage.setItem("expiresIn", response.expiresIn);
+                mystorage.setItem("idToken", response.idToken,);
+                mystorage.setItem("localId", response.localId,);
+                mystorage.setItem("refreshToken", response.refreshToken);      
+                                         
                 adduser(response.localId)
             },
             error:function (error) {

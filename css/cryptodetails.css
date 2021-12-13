@@ -96,3 +96,22 @@
     flex-direction: column;
     justify-items: center;
 }
+
+.islogin{
+    background-color: thistle;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.islogin i{
+    font-size: 2rem;
+}
+
+.favourate{
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 1rem auto auto auto ;
+    background-color: green;
+    width: 60%;
+    
+}
